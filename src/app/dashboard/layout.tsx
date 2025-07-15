@@ -13,7 +13,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     }
 
     return (
-        <div className="flex min-h-screen">
+        <div className="flex h-screen overflow-hidden">
             <aside className="w-56 bg-zinc-100 border-r border-zinc-200 flex flex-col p-6">
                 <nav className="flex-1">
                     <ul className="space-y-4">

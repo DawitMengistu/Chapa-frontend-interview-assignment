@@ -6,10 +6,12 @@ import { useUser } from '@/context/UserContext'
 import { toast } from 'sonner'
 import { transactions } from '@/data/transaction'
 import { useState } from 'react'
+import { useRequireRole } from '@/lib/useRequireRole'
 
 export default function UserDashboard() {
     const router = useRouter()
     const { role, hydrated } = useUser()
+    const canRender = useRequireRole('user')
     const [amount, setAmount] = useState('')
     const [to, setTo] = useState('')
     const [sending, setSending] = useState(false)
@@ -27,14 +29,14 @@ export default function UserDashboard() {
         }
     }, [role, hydrated, router])
 
-    if (role !== 'user') return null
+    if (!canRender) return null
 
     return (
         <div>
             <h1 className="text-2xl font-bold mb-4">User Dashboard</h1>
             <div className="mb-6 p-4 bg-[#AAD959] text-white rounded-lg w-full max-w-xs">
-                <div className="text-lg font-semibold">Wallet Balance</div>
-                <div className="text-2xl font-bold">$1,250.00</div>
+                <div className="text-lg text-black font-semibold">Wallet Balance</div>
+                <div className="text-2xl text-black font-bold">$1,250.00</div>
             </div>
             <div className="mb-6">
                 <h2 className="text-lg font-semibold mb-2">Recent Transactions</h2>
