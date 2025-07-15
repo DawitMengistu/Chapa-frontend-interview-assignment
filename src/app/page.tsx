@@ -10,6 +10,7 @@ export default function Home() {
       <p className="mb-6 text-lg">
         This project is a role-based dashboard Single Page Application (SPA) built with React (Next.js) for a fictional Payment Service Provider platform. It demonstrates how to render different UIs and features based on the logged-in user's role, using only mock data and simulated API calls (no real backend).
       </p>
+      <a href="/login" className="inline-block mb-4 px-4 py-2 bg-[#AAD959] text-white rounded font-semibold hover:bg-[#8fc94b] transition">Go to Login</a>
       <h2 className="text-2xl font-semibold mb-2">Features & Walkthrough</h2>
       <ul className="list-disc pl-6 mb-6 space-y-2">
         <li>
@@ -47,9 +48,12 @@ export default function Home() {
       <h2 className="text-xl font-semibold mb-2">How to Explore</h2>
       <p className="mb-6">
         Log in as a <b>User</b>, <b>Admin</b>, or <b>Super Admin</b> to see the different dashboards and features. Each role unlocks different functionality as described above.
+        <br />
+        <a href="/login" className="text-[#AAD959] underline font-semibold">Login here</a>
       </p>
       <p className="text-zinc-500">Submited by Dawit Mengistu</p>
       <div className="mt-2 flex gap-2 text-base">
+        <a href="/login" className="hover:underline font-semibold text-[#AAD959]">Login</a>
         <a href="https://t.me/DawitMengistu" target="_blank" rel="noopener noreferrer" className="hover:underline">Telegram</a>
         <a href="https://github.com/DawitMengistu" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a>
         <a href="https://dawitmengistu.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Portfolio</a>
